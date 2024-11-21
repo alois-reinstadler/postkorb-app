@@ -11,6 +11,9 @@ export default defineConfig({
 			outdir: './src/lib/paraglide'
 		})
 	],
+	ssr: {
+		noExternal: ['oslo']
+	},
 	optimizeDeps: {
 		exclude: ['@node-rs/argon2', '@node-rs/bcrypt']
 	}
