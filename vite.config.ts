@@ -1,6 +1,7 @@
+import { defineConfig } from 'vite';
+
 import { paraglide } from '@inlang/paraglide-sveltekit/vite';
 import { sveltekit } from '@sveltejs/kit/vite';
-import { defineConfig } from 'vite';
 
 export default defineConfig({
 	plugins: [
@@ -9,5 +10,8 @@ export default defineConfig({
 			project: './project.inlang',
 			outdir: './src/lib/paraglide'
 		})
-	]
+	],
+	optimizeDeps: {
+		exclude: ['@node-rs/argon2', '@node-rs/bcrypt']
+	}
 });
