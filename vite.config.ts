@@ -12,8 +12,9 @@ export default defineConfig({
 		})
 	],
 	ssr: {
-		noExternal: ['oslo']
+		noExternal: ['oslo', '@node-rs/argon2', '@node-rs/bcrypt']
 	},
+
 	optimizeDeps: {
 		exclude: ['@node-rs/argon2', '@node-rs/bcrypt']
 	}
